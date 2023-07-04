@@ -2,9 +2,13 @@ package com.sam.springbegin.game;
 
 public class GameRunner {
 
-    MarioGame game;
+    //MarioGame game;
 
-    public GameRunner(MarioGame game){
+    //private SuperContraGame game;
+    // 이러면 주소값을 가질 수 있데
+    private GamingConsol game;
+
+    public GameRunner(GamingConsol game){
         this.game = game;
     }
 

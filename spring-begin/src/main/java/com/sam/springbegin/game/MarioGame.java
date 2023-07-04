@@ -1,6 +1,6 @@
 package com.sam.springbegin.game;
 
-public class MarioGame {
+public class MarioGame implements GamingConsol{
 
     public void up(){
         System.out.println("Jump");
