@@ -16,7 +16,10 @@ public class App02HelloSpring {
         System.out.println(context.getBean("age"));
         System.out.println(context.getBean("person"));
         System.out.println(context.getBean("person2"));
+        System.out.println(context.getBean("person3"));
 
+        
+        System.out.println(context.getBean("address3"));
         System.out.println(context.getBean(Address.class));
 
         // 컨텍스트가 getBean이고 컨텍스트에서 값을 가져올 수 있는 방법 중 빈의 이름을 사용하는 방법

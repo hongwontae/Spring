@@ -27,7 +27,12 @@ public class HelloWorldConfigration {
         return new Person("Ravi", 20, new Address(20, "New YORK"));
     }
 
-    @Bean(name="person2")
+    @Bean(name = "person3")
+    public Person person3Parameters(String name, int age, Address address2) {
+        return new Person(name, age, address2);
+    }
+
+    @Bean(name = "person2")
     public Person person2Method() {
         return new Person(name(), age(), address());
     }
@@ -35,6 +40,11 @@ public class HelloWorldConfigration {
     @Bean(name = "address2")
     public Address address() {
         return new Address(20, "New YORK");
+    }
+
+    @Bean(name = "address3")
+    public Address address3() {
+        return new Address(180, "Mongol City");
     }
 
     // 여기서 만드는 빈은 스프링 컨텍스트가 관리한다.
