@@ -1,7 +1,9 @@
 package com.sam.springbegin;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name, int age, Address address) {
 };
@@ -28,8 +30,19 @@ public class HelloWorldConfigration {
     }
 
     @Bean(name = "person3")
-    public Person person3Parameters(String name, int age, Address address2) {
-        return new Person(name, age, address2);
+    public Person person3Parameters(String name, int age, Address address3) {
+        return new Person(name, age, address3);
+    }
+
+    @Bean
+    @Primary
+    public Person person4Parameters(String name, int age, Address address) {
+        return new Person(name, age, address); // 현재 address 빈이 존재하지 않는다.
+    }
+
+    @Bean
+    public Person person5Qualifier(String name, int age, @Qualifier("address3qualifier") Address address) {
+        return new Person(name, age, address); // 현재 address 빈이 존재하지 않는다.
     }
 
     @Bean(name = "person2")
@@ -38,11 +51,13 @@ public class HelloWorldConfigration {
     }
 
     @Bean(name = "address2")
+    @Primary // 두 개의 같은 이름의 빈이 겹치면 우선순위를 부여하는 어노테이션
     public Address address() {
         return new Address(20, "New YORK");
     }
 
     @Bean(name = "address3")
+    @Qualifier("address3qualifier")
     public Address address3() {
         return new Address(180, "Mongol City");
     }
