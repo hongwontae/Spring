@@ -1,9 +1,4 @@
-package com.sam.springbegin;
-
-import com.sam.springbegin.game.GameRunner;
-import com.sam.springbegin.game.MarioGame;
-import com.sam.springbegin.game.PackMan;
-import com.sam.springbegin.game.SuperContraGame;
+package com.sam.springbegin.game;
 
 public class App01GamingBasicJava {
 

@@ -1,4 +1,4 @@
-package com.sam.springbegin;
+package com.sam.springbegin.Bean;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
