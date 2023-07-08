@@ -1,5 +1,8 @@
 package com.sam.springbegin.game;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PackMan implements GamingConsol{
 
     public void up(){
