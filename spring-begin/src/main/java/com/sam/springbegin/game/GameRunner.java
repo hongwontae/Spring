@@ -1,5 +1,6 @@
 package com.sam.springbegin.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,7 +12,7 @@ public class GameRunner {
     // 이러면 주소값을 가질 수 있데
     private GamingConsol game;
 
-    public GameRunner(GamingConsol game){
+    public GameRunner(@Qualifier("SuperContraGameQulifier") GamingConsol game){
         this.game = game;
     }
 
