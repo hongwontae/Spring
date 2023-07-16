@@ -1,0 +1,20 @@
+스프링 프레임워크 2023-07-06/ 19~22
+
+간단하게 설명하자면 Bean은 Spring FrameWork가 관리하는 Java 객체이다.
+
+Spring Context를 가지고 있는 클래스에서
+context.getBeanDefinitionNames => 정의된 빈의 모든 이름을 반환한다.
+
+메서드 참조란?/ .class?/ 한정자?/ arrays?(javaMemo에 기록)
+
+
+스프링 컨텍스트의 설정 파일도 빈으로 등록되어 있다.
+
+primary => 타입.class로 요청하면 두 개의 리턴 타입의 메서드가 존재할 수 있다. => 오류 발생
+=> primary로 우선순위 정해주면 된다.
+
+@Qualifier
+=> 한정자를 만들어준다.
+
+지금까지 했던 내용은 객체를 만들고 bean으로 만들어주는 것까지 수동으로 했다.
+그렇다면 스프링이 객체를 만들도록 하려면?

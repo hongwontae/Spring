@@ -1,0 +1,24 @@
+Spring @Bean VS @Component
+
+@Bean은 Configration과 함께 쓴다. => 싱글톤을 유지하기 위해서
+(Configration은 안에 @Component가 있어서 클래스 자체도 빈이 된다. => class,method 둘 다 빈이 된다.)
+
+@Component
+(ComponentScan을 통해 빈을 찾는다. 클래스가 빈이 된다.)
+
+
+
+bean은 메소드 레벨에서 객체를 빈으로 등록한다.
+(메서드에서만 사용가능)
+
+Component는 클래스 레벨에서 사용되며 런타임시에 컴포넌트스캔을 통해 자동으로 빈을 찾고 등록한다.
+(클래스에서만 사용가능)
+
+@Configration
+=> @Bean 설정 가능
+=> 이 어노테이션 내부를 보면 configuration안에 component가 있다.
+
+ioc 컨테이너 안에 있어야 자동 와이어링할 준비가 되는 것이다. => Configuration이 있어야 생성된 bean이 ioc Container에 간다.
+
+@Component => 다른 클래스가 컴포넌트 클래스 자체를 사용가능하게 한다.
+@Bean => 해당 메서드만 준다.
