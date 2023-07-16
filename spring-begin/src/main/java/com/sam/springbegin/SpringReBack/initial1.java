@@ -18,7 +18,10 @@ class ClassA{
 @Component
 @Lazy
 class ClassB{
+
     private ClassA classA;
+
+
     public ClassB(ClassA classA){
         System.out.println("Some Initialization logic");
         this.classA=classA;
@@ -44,7 +47,7 @@ public class initial1 {
             
             //Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
-            System.out.println("Initialization of context is completed");
+            System.out.println("Initialization of context is completed"); // 컨텍스트 내부 먼저 호출된다. 우선순위 1
 
             context.getBean(ClassB.class).doSomething(); // 빈 호출
 

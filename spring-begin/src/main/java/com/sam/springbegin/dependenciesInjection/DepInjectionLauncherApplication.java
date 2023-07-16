@@ -2,7 +2,6 @@ package com.sam.springbegin.dependenciesInjection;
 
 import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +34,6 @@ class YourBusinessClass{
         return "Using "+dependency1+" and "+dependency2;
     }
 
-    
     public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
         System.out.println("Constructor");
         this.dependency1 = dependency1;

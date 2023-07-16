@@ -1,6 +1,5 @@
 package com.sam.springbegin.ScopeAndSington;
 
-import java.util.Arrays;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

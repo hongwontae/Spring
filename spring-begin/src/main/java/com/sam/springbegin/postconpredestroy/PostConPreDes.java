@@ -11,15 +11,22 @@ import java.util.Arrays;
 
 @Component
 class SomeClass{
+
     private SomeDependency someDependency;
+
+
     public SomeClass(SomeDependency someDependency){
         this.someDependency=someDependency;
         System.out.println("All dependencies are ready");
     }
+
+
     @PostConstruct
     public void initialize(){
         someDependency.getReady();
     }
+
+    
     @PreDestroy
     public void cleanUp(){
         System.out.println("Clean UP");

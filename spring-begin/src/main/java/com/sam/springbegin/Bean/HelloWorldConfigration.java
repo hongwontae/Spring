@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 record Person(String name, int age, Address address) {
-};
+}; // 레코드 객체를 가져온다. 레코드는 toString이 있다.
 
 record Address(int row, String city) {
 }
