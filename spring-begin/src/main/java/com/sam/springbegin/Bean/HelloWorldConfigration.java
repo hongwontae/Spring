@@ -29,9 +29,10 @@ public class HelloWorldConfigration {
         return new Person("Ravi", 20, new Address(20, "New YORK"));
     }
 
-    @Bean(name = "person3")
+    
+    @Bean(name = "person")
     public Person person3Parameters(String name, int age, Address address3) {
-        return new Person(name, age, address3);
+        return new Person("son", age, address3);
     }
 
     @Bean

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class PackMan implements GamingConsol{
 
     public void up(){
-        System.out.println("Jump33");
+        System.out.println("Jump33-packMan");
     }
 
       public void down(){
